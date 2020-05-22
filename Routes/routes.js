@@ -1,14 +1,9 @@
 const express = require('express');
-
+const bookCtrl = require('../Controllers/book.controller')
 
 
 
 const router = express.Router()
-
-router.post('/submit',(req,res)=>{
-  console.log(req.body);
-  res.send(`<h1>The data send to log</h1>`)
-
-})
+router.post('/submit',bookCtrl.create)
 
 module.exports = router

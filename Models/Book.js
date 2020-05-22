@@ -15,16 +15,15 @@ const BookSchmea = new Schema({
     required: true
   },
   publication :{
-    type: String,
-    required: true
+    type: String
   },
   publicationYear :{
     type: String,
-    required: true
+    
   },
   abtBook :{
     type: String,
-    required: true
+    
   },
 })
 
