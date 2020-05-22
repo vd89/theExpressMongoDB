@@ -10,8 +10,17 @@ const create = async (req,res) => {
     res.send(err)
   }  
 }
+const list = async (req,res) => {
+  bookData.find({},(err,data) => {
+    if (err) {
+      return res.status(400).json({error : console.log(err)})
+    } else {
+      res.json(data)
+    }
+  })
+}
 
 
-module.exports = {create}
+module.exports = {create,list}
 
 
